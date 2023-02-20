@@ -36,7 +36,6 @@
 .logo img {
   width: 2.5rem;
   height: 2.5rem;
-  background-color: #00a1a7;
 }
 nav.fixed {
   position: fixed;
@@ -45,8 +44,6 @@ nav.fixed {
 }
 .btn-open {
   z-index: 999;
-  color: #e31b6d;
-  border-radius: 1rem;
   display: flex;
   justify-content: flex-end;
   align-items: center;

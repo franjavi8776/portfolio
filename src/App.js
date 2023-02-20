@@ -3,6 +3,8 @@ import { About } from "./Components/About";
 import { Home } from "./Components/Home";
 import { Contact } from "./Components/Contact";
 import { Nav } from "./Components/Nav";
+import Portfolio from "./Components/Portfolio";
+import Blog from "./Components/Blog";
 
 function App() {
   return (
@@ -10,6 +12,8 @@ function App() {
       <Home />
       <Nav />
       <About />
+      <Portfolio />
+      <Blog />
       <Contact />
     </>
   );

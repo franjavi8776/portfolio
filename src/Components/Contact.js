@@ -1,4 +1,7 @@
 import "./Contact.css";
+import { FaFacebookF, FaRegistered } from "react-icons/fa";
+import { TiSocialInstagram } from "react-icons/ti";
+import { RiYoutubeLine } from "react-icons/ri";
 import { useForm } from "./Hooks/useForm";
 import Loader from "./Loader";
 import Message from "./Message";
@@ -104,7 +107,31 @@ export const Contact = () => {
             {response && <Message msg="Your message has been sent" />}
           </div>
         </form>
-        <div className="contact-socialMd"></div>
+        <div className="contact-socialMd">
+          <div className="socialMd">
+            <div className="social-icon">
+              <a href="https://www.facebook.com/franciscojavier.villarroelsalvatierra">
+                <FaFacebookF className="ico" />
+              </a>
+            </div>
+            <div className="social-icon">
+              <a href="https://www.instagram.com">
+                <TiSocialInstagram className="ico" />
+              </a>
+            </div>
+            <div className="social-icon">
+              <a href="https://www.youtube.com">
+                <RiYoutubeLine className="ico" />
+              </a>
+            </div>
+          </div>
+          <div className="name">
+            FRANCISCO VILLARROEL
+            <i>
+              <FaRegistered /> 2023
+            </i>
+          </div>
+        </div>
       </section>
     </div>
   );

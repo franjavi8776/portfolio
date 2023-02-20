@@ -34,7 +34,6 @@ export const Nav = () => {
             className="link"
             onClick={() => {
               scrollTo("home");
-              //menu.classList.toggle("is-active");
             }}
           >
             HOME
@@ -44,7 +43,6 @@ export const Nav = () => {
             className="link"
             onClick={() => {
               scrollTo("about");
-              //menu.classList.toggle("is-active");
             }}
           >
             ABOUT
@@ -53,8 +51,25 @@ export const Nav = () => {
             to="/"
             className="link"
             onClick={() => {
+              scrollTo("portfolio");
+            }}
+          >
+            PORTFOLIO
+          </Link>
+          <Link
+            to="/"
+            className="link"
+            onClick={() => {
+              scrollTo("blog");
+            }}
+          >
+            BLOG
+          </Link>
+          <Link
+            to="/"
+            className="link"
+            onClick={() => {
               scrollTo("contact");
-              //menu.classList.toggle("is-active");
             }}
           >
             CONTACT

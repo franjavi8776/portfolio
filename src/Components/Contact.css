@@ -58,7 +58,11 @@ textarea {
   margin: 1rem auto;
   text-align: center;
 }
+
+/* social media */
 .contact-socialMd {
+  display: flex;
+  flex-direction: column;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -67,6 +71,39 @@ textarea {
   margin-top: 4rem;
   background-color: #1b242f;
 }
+.socialMd {
+  width: 50%;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 1.6rem;
+}
+
+.social-icon a {
+  padding: 1rem;
+  color: white;
+  background-color: #2b3848;
+  transition: all 0.3s ease-in-out;
+}
+.social-icon a:hover {
+  transform: scale(0.98);
+  color: #00a1a7;
+  border-radius: 1rem;
+}
+.ico {
+  font-size: 1.5rem;
+}
+
+.name {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #41556e;
+}
+.name i {
+  margin-left: 0.25rem;
+  color: #e31b6d;
+}
 
 @media screen and (min-width: 768px) {
   .form {
@@ -74,5 +111,13 @@ textarea {
   }
   .contact-socialMd {
     height: 12rem;
+  }
+  .socialMd {
+    width: 30%;
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 1.6rem;
   }
 }
