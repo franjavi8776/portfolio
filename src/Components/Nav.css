@@ -34,8 +34,9 @@
   text-align: center;
 }
 .logo img {
-  width: 4.2vw;
-  height: 4.2vh;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #00a1a7;
 }
 nav.fixed {
   position: fixed;
@@ -63,14 +64,14 @@ nav.fixed {
     top: 6vh;
     left: -100%;
     width: 100%;
-    min-height: 85vh;
-    font-size: 2rem;
+    min-height: 94vh;
+    font-size: 1.5rem;
     height: inherit;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background-color: #1b242f99;
+    background-color: #1b242f;
     color: white;
     transition: all 0.5s ease;
   }
