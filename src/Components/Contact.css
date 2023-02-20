@@ -72,4 +72,7 @@ textarea {
   .form {
     width: 40%;
   }
+  .contact-socialMd {
+    height: 12rem;
+  }
 }

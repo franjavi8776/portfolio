@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import "./Nav.css";
 
 export const Nav = () => {
-  const $nav = document.querySelector(".nav");
-  const menu = document.querySelector(".ul-nav");
+  // const menu = document.querySelector(".ul-nav");
 
   window.addEventListener("scroll", () => {
-    $nav.classList.toggle("fixed", window.pageYOffset > 900);
+    const $nav = document.querySelector(".nav");
+    $nav.classList.toggle("fixed", window.scrollY > 900);
   });
 
   const scrollTo = (id) => {
@@ -16,6 +16,7 @@ export const Nav = () => {
       behavior: "smooth",
     });
   };
+
   return (
     <div className="container-nav">
       <nav id="nav" className="nav">
@@ -25,7 +26,7 @@ export const Nav = () => {
             className="link"
             onClick={() => {
               scrollTo("home");
-              menu.classList.toggle("is-active");
+              //menu.classList.toggle("is-active");
             }}
           >
             HOME
@@ -35,7 +36,7 @@ export const Nav = () => {
             className="link"
             onClick={() => {
               scrollTo("about");
-              menu.classList.toggle("is-active");
+              //menu.classList.toggle("is-active");
             }}
           >
             ABOUT
@@ -45,7 +46,7 @@ export const Nav = () => {
             className="link"
             onClick={() => {
               scrollTo("contact");
-              menu.classList.toggle("is-active");
+              //menu.classList.toggle("is-active");
             }}
           >
             CONTACT
@@ -57,7 +58,7 @@ export const Nav = () => {
         <div className="btn-open">
           <TfiMenu
             onClick={(e) => {
-              menu.classList.toggle("is-active");
+              //menu.classList.toggle("is-active");
             }}
           />
         </div>

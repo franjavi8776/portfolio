@@ -54,7 +54,7 @@ export const Contact = () => {
   return (
     <div id="contact" className="contact">
       <section className="contact-container">
-        <h2>CONTATC</h2>
+        <h2>CONTACT</h2>
         <h5>Have a question or want to work together?</h5>
         <form onSubmit={handleSubmit} className="form">
           <input
