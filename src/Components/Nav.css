@@ -1,5 +1,4 @@
 /*Navigation*/
-
 .nav {
   position: relative;
   width: 100%;
@@ -46,16 +45,13 @@ nav.fixed {
 .btn-open {
   z-index: 999;
   color: #e31b6d;
-  font-size: 2rem;
+  border-radius: 1rem;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-right: 2vw;
-  cursor: pointer;
+  margin-right: 1vw;
 }
-.is-active {
-  left: 0;
-}
+
 @media screen and (min-width: 768px) {
   .btn-open {
     display: none;
@@ -67,17 +63,18 @@ nav.fixed {
     top: 6vh;
     left: -100%;
     width: 100%;
-    min-height: 94vh;
+    min-height: 85vh;
+    font-size: 2rem;
     height: inherit;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background-color: #1b242f;
+    background-color: #1b242f99;
     color: white;
     transition: all 0.5s ease;
   }
-  .is-active {
+  .ul-nav.is-active {
     left: 0;
   }
   .logo {

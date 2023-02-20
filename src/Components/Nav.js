@@ -1,14 +1,22 @@
-import { TfiMenu } from "react-icons/tfi";
 import { Link } from "react-router-dom";
+import hamburguer from "./btnAmburguer";
 import "./Nav.css";
 
 export const Nav = () => {
-  // const menu = document.querySelector(".ul-nav");
-
   window.addEventListener("scroll", () => {
     const $nav = document.querySelector(".nav");
     $nav.classList.toggle("fixed", window.scrollY > 900);
   });
+
+  hamburguer(".btn-open", ".ul-nav", ".link");
+
+  // document.addEventListener("click", (e) => {
+  //   const btn = document.querySelector(".btn-open");
+  //   const menu = document.querySelector(".ul-nav");
+  //   if (e.target.matches(btn)) {
+  //     menu.classList.toggle("is-active");
+  //   }
+  // });
 
   const scrollTo = (id) => {
     const element = document.getElementById(id);
@@ -55,13 +63,11 @@ export const Nav = () => {
         <div className="logo">
           <img className="logo" src="coding.svg" alt="logo" />
         </div>
-        <div className="btn-open">
-          <TfiMenu
-            onClick={(e) => {
-              //menu.classList.toggle("is-active");
-            }}
-          />
-        </div>
+        <button class="btn-open hamburger hamburger--vortex" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
       </nav>
     </div>
   );
