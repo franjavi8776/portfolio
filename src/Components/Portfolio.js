@@ -3,7 +3,7 @@ import "./Portofolio.css";
 const Portfolio = () => {
   return (
     <div id="portfolio" className="container">
-      <h2>Portfolio</h2>
+      <h2>PORTFOLIO</h2>
     </div>
   );
 };

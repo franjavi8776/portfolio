@@ -1,12 +1,22 @@
 .about-section {
   width: 80%;
   margin: 8rem auto;
+  opacity: 0;
+  transform: scale(85%);
+  transition: 2s;
 }
+.about-section--zoom {
+  opacity: 1;
+  transform: scale(100%);
+  transition: 2s;
+}
+
 .about-article {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 3rem;
 }
+
 .about-icons h3 {
   font-size: 1.6rem;
   text-align: center;

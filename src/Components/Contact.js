@@ -1,3 +1,4 @@
+import { useInView } from "react-intersection-observer";
 import "./Contact.css";
 import { FaFacebookF, FaRegistered } from "react-icons/fa";
 import { TiSocialInstagram } from "react-icons/ti";
@@ -54,12 +55,21 @@ export const Contact = () => {
     handleBlur,
     handleSubmit,
   } = useForm(initialForm, validationsForm);
+
+  const { ref, inView } = useInView({
+    /* Optional options */
+    threshold: 0.4,
+  });
   return (
     <div id="contact" className="contact">
       <section className="contact-container">
         <h2>CONTACT</h2>
         <h5>Have a question or want to work together?</h5>
-        <form onSubmit={handleSubmit} className="form">
+        <form
+          onSubmit={handleSubmit}
+          className={inView ? "form form--zoom" : "form"}
+          ref={ref}
+        >
           <input
             type="text"
             name="name"
@@ -108,7 +118,10 @@ export const Contact = () => {
           </div>
         </form>
         <div className="contact-socialMd">
-          <div className="socialMd">
+          <div
+            className={inView ? "socialMd socialMd--zoom" : "socialMd"}
+            ref={ref}
+          >
             <div className="social-icon">
               <a href="https://www.facebook.com/franciscojavier.villarroelsalvatierra">
                 <FaFacebookF className="ico" />

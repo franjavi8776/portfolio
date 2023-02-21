@@ -4,6 +4,7 @@
   clip-path: polygon(50% 8%, 100% 0, 100% 100%, 0 100%, 0 0);
   background-color: #2b3848;
 }
+
 .contact-container h2 {
   color: #e31b6d;
 }
@@ -18,6 +19,14 @@
   padding: 2rem;
   display: flex;
   flex-direction: column;
+  opacity: 0;
+  transform: scale(85%);
+  transition: 2s;
+}
+.form--zoom {
+  opacity: 1;
+  transform: scale(100%);
+  transition: 2s;
 }
 .form input,
 textarea {
@@ -71,6 +80,7 @@ textarea {
   margin-top: 4rem;
   background-color: #1b242f;
 }
+
 .socialMd {
   width: 50%;
   margin: 2rem auto;
@@ -78,6 +88,14 @@ textarea {
   flex-direction: row;
   justify-content: space-around;
   font-size: 1.6rem;
+  opacity: 0;
+  transform: scale(85%);
+  transition: 2s;
+}
+.socialMd--zoom {
+  opacity: 1;
+  transform: scale(100%);
+  transition: 2s;
 }
 
 .social-icon a {

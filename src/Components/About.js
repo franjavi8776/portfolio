@@ -1,3 +1,4 @@
+import { useInView } from "react-intersection-observer";
 import { RiCompass2Line } from "react-icons/ri";
 import { DiResponsive } from "react-icons/di";
 import { IoRocketSharp } from "react-icons/io5";
@@ -5,10 +6,19 @@ import { MdLightbulbOutline } from "react-icons/md";
 import "./About.css";
 
 export const About = () => {
+  const { ref, inView } = useInView({
+    /* Optional options */
+    threshold: 0.4,
+  });
   return (
     <div id="about" className="container">
       <h2>ABOUT</h2>
-      <section className="about-section">
+      <section
+        className={
+          inView ? "about-section about-section--zoom" : "about-section"
+        }
+        ref={ref}
+      >
         <article className="about-article">
           <div className="about-icons">
             <div className="about-icon">
