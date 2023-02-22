@@ -105,9 +105,8 @@ textarea {
   transition: all 0.3s ease-in-out;
 }
 .social-icon a:hover {
-  transform: scale(0.98);
   color: #00a1a7;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
 }
 .ico {
   font-size: 1.5rem;

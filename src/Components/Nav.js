@@ -10,14 +10,6 @@ export const Nav = () => {
 
   hamburguer(".btn-open", ".ul-nav", ".link");
 
-  // document.addEventListener("click", (e) => {
-  //   const btn = document.querySelector(".btn-open");
-  //   const menu = document.querySelector(".ul-nav");
-  //   if (e.target.matches(btn)) {
-  //     menu.classList.toggle("is-active");
-  //   }
-  // });
-
   const scrollTo = (id) => {
     const element = document.getElementById(id);
     element.scrollIntoView({

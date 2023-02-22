@@ -15,7 +15,7 @@ export const Home = () => {
           <h1>
             Hello, I'm <b>Francisco Villarroel</b>
           </h1>
-          <h1>I'm a full-Stack web developer</h1>
+          <h1>I'm a Full-Stack web developer</h1>
           <button
             className="home-button"
             to="/"
