@@ -20,11 +20,11 @@ const Blog = () => {
               <ul className="slides">
                 <li className="slide">
                   <img src={vero} className="avatar" alt="meandvero" />
-                  <h3>My wife and I</h3>
+                  <h3>Me with my wife</h3>
                 </li>
                 <li className="slide">
                   <img className="avatar" src={daughters} alt="app mobiles" />
-                  <h3>My children and I</h3>
+                  <h3>My family</h3>
                 </li>
                 <li className="slide">
                   <img className="avatar" src={son} alt="ciberseguridad" />
@@ -32,7 +32,7 @@ const Blog = () => {
                 </li>
                 <li className="slide">
                   <img src={nati} className="avatar" alt="mySonFamily" />
-                  <h3>My daughter's and her wife Nicole</h3>
+                  <h3>My daughter's and her wife</h3>
                 </li>
               </ul>
             </article>
