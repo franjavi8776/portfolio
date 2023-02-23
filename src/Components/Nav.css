@@ -11,7 +11,7 @@
   border-bottom: medium solid #00a1a7;
 }
 .ul-nav {
-  width: 70%;
+  width: 64%;
   height: inherit;
   display: flex;
   flex-direction: row;
@@ -27,7 +27,7 @@
 }
 
 .logo {
-  width: 30%;
+  width: 36%;
   background-color: #1b242f;
   display: flex;
   justify-content: center;

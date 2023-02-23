@@ -32,7 +32,7 @@ const Blog = () => {
                 </li>
                 <li className="slide">
                   <img src={nati} className="avatar" alt="mySonFamily" />
-                  <h3>My daughter's and her wife</h3>
+                  <h3>My daughter and her wife</h3>
                 </li>
               </ul>
             </article>

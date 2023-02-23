@@ -1,6 +1,7 @@
 .about-section {
   width: 80%;
-  margin: 8rem auto;
+  margin: 10rem auto;
+  margin-bottom: 0;
   opacity: 0;
   transform: scale(85%);
   transition: 2s;

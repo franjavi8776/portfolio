@@ -67,8 +67,8 @@
   font-size: 1.5rem;
   font-weight: bold;
   margin-top: 0;
-  color: black;
-  text-shadow: 1px 1px 3px #00a1a7;
+  color: rgb(59, 56, 56);
+  text-shadow: 0.5px 0.5px 1px #00a1a7;
 }
 @media screen and (min-width: 768px) {
   .blog-container {
