@@ -1,18 +1,22 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.d898935a.css",
-    "main.js": "/portfolio/static/js/main.a96c32db.js",
+    "main.css": "/portfolio/static/css/main.d9921bda.css",
+    "main.js": "/portfolio/static/js/main.694f86e2.js",
+    "static/media/horno.png": "/portfolio/static/media/horno.2ee62965322eced3e10a.png",
+    "static/media/manguitigre.png": "/portfolio/static/media/manguitigre.4568b68c1e12ec4384e7.png",
+    "static/media/barbeque.png": "/portfolio/static/media/barbeque.c5cc335782404f2572ba.png",
     "static/media/meandvero.jpg": "/portfolio/static/media/meandvero.ce95848a45516e71e15e.jpg",
+    "static/media/veterinaty.png": "/portfolio/static/media/veterinaty.b342ff4ff1239a9ca1bf.png",
     "static/media/mysonfamily.jpg": "/portfolio/static/media/mysonfamily.d20f9e5544f6a77e7c67.jpg",
     "static/media/nati1.jpg": "/portfolio/static/media/nati1.9cd2bcb26daa65462c5b.jpg",
     "static/media/todos.jpg": "/portfolio/static/media/todos.7c942e62c434a1c67292.jpg",
     "static/media/Home.png": "/portfolio/static/media/Home.6552402707a51b9804f9.png",
     "index.html": "/portfolio/index.html",
-    "main.d898935a.css.map": "/portfolio/static/css/main.d898935a.css.map",
-    "main.a96c32db.js.map": "/portfolio/static/js/main.a96c32db.js.map"
+    "main.d9921bda.css.map": "/portfolio/static/css/main.d9921bda.css.map",
+    "main.694f86e2.js.map": "/portfolio/static/js/main.694f86e2.js.map"
   },
   "entrypoints": [
-    "static/css/main.d898935a.css",
-    "static/js/main.a96c32db.js"
+    "static/css/main.d9921bda.css",
+    "static/js/main.694f86e2.js"
   ]
 }
