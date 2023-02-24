@@ -1,22 +1,32 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.d9921bda.css",
-    "main.js": "/portfolio/static/js/main.694f86e2.js",
+    "main.css": "/portfolio/static/css/main.88d74dfc.css",
+    "main.js": "/portfolio/static/js/main.21b0db48.js",
     "static/media/horno.png": "/portfolio/static/media/horno.2ee62965322eced3e10a.png",
     "static/media/manguitigre.png": "/portfolio/static/media/manguitigre.4568b68c1e12ec4384e7.png",
+    "static/media/veterinary1.png": "/portfolio/static/media/veterinary1.9401fd860f456b606320.png",
+    "static/media/veterinary2.png": "/portfolio/static/media/veterinary2.41d05963d074916d5d2f.png",
+    "static/media/horno2.png": "/portfolio/static/media/horno2.0a8de15681e70c16bca1.png",
     "static/media/barbeque.png": "/portfolio/static/media/barbeque.c5cc335782404f2572ba.png",
     "static/media/meandvero.jpg": "/portfolio/static/media/meandvero.ce95848a45516e71e15e.jpg",
     "static/media/veterinaty.png": "/portfolio/static/media/veterinaty.b342ff4ff1239a9ca1bf.png",
+    "static/media/manguitigre2.png": "/portfolio/static/media/manguitigre2.b76a8d4ef350562e84c4.png",
+    "static/media/barbeque1.png": "/portfolio/static/media/barbeque1.5f91f0a57c71272087b3.png",
+    "static/media/barbeque2.png": "/portfolio/static/media/barbeque2.d9feec7c2118b1040710.png",
     "static/media/mysonfamily.jpg": "/portfolio/static/media/mysonfamily.d20f9e5544f6a77e7c67.jpg",
+    "static/media/manguitigre3.png": "/portfolio/static/media/manguitigre3.533d767803c8d89afbdd.png",
+    "static/media/veterinary3.png": "/portfolio/static/media/veterinary3.a1648f798204aeb8163e.png",
     "static/media/nati1.jpg": "/portfolio/static/media/nati1.9cd2bcb26daa65462c5b.jpg",
     "static/media/todos.jpg": "/portfolio/static/media/todos.7c942e62c434a1c67292.jpg",
+    "static/media/manguitigre4.png": "/portfolio/static/media/manguitigre4.0b91be04b7c4222ec19c.png",
+    "static/media/barbeque3.png": "/portfolio/static/media/barbeque3.38671cdb0bb9fd387367.png",
     "static/media/Home.png": "/portfolio/static/media/Home.6552402707a51b9804f9.png",
     "index.html": "/portfolio/index.html",
-    "main.d9921bda.css.map": "/portfolio/static/css/main.d9921bda.css.map",
-    "main.694f86e2.js.map": "/portfolio/static/js/main.694f86e2.js.map"
+    "main.88d74dfc.css.map": "/portfolio/static/css/main.88d74dfc.css.map",
+    "main.21b0db48.js.map": "/portfolio/static/js/main.21b0db48.js.map"
   },
   "entrypoints": [
-    "static/css/main.d9921bda.css",
-    "static/js/main.694f86e2.js"
+    "static/css/main.88d74dfc.css",
+    "static/js/main.21b0db48.js"
   ]
 }
