@@ -1,0 +1,30 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+.container {
+  width: 100%;
+  min-height: 94vh;
+}
+h2 {
+  width: 200px;
+  position: relative;
+  top: 6rem;
+  margin: 0 auto;
+  padding: 0.25rem;
+  font-size: 2rem;
+  color: #1b242f;
+  border-top: thin solid #00a1a7;
+  border-bottom: thin solid #00a1a7;
+  text-align: center;
+}
