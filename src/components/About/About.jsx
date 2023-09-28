@@ -12,16 +12,16 @@ const About = () => {
   });
   return (
     <div id="about" className={style.container}>
-      <h2>ABOUT</h2>
-      <section
-        className={
-          inView
-            ? `${style.aboutSection} ${style.aboutSectionZoom}`
-            : `${style.aboutSection}`
-        }
-        ref={ref}
-      >
-        <article className={style.aboutArticle}>
+      <h2>ABOUT ME</h2>
+      <section className="aboutSection">
+        <article
+          className={
+            inView
+              ? `${style.aboutArticle} ${style.aboutArticleZoom}`
+              : `${style.aboutArticle}`
+          }
+          ref={ref}
+        >
           <div className={style.aboutIcons}>
             <div className={style.aboutIcon}>
               <RiCompass2Line className={style.icon} />
@@ -73,7 +73,14 @@ const About = () => {
           </div>
         </article>
         <article className={style.articlePhoto}>
-          <div className={style.aboutSkills}>
+          <div
+            className={
+              inView
+                ? `${style.aboutSkills} ${style.aboutSkillsZoom}`
+                : `${style.aboutSkills}`
+            }
+            ref={ref}
+          >
             <div>
               <h3>Soft skills</h3>
               <div className={style.aboutProgress}>
@@ -84,48 +91,47 @@ const About = () => {
                 <progress value="95" min="0" max="100"></progress>
                 <p>
                   <b>PROBLEM SOLVING</b>
-                  <b>100%</b>
                 </p>
                 <progress value="98" min="0" max="100"></progress>
                 <p>
                   <b>TEAMWORK</b>
-                  <b>100%</b>
                 </p>
                 <progress value="93" min="0" max="100"></progress>
                 <p>
                   <b>CREATIVITY</b>
-                  <b>100%</b>
                 </p>
                 <progress value="90" min="0" max="100"></progress>
                 <p>
                   <b>ADAPTABILITY</b>
-                  <b>100%</b>
                 </p>
                 <progress value="95" min="0" max="100"></progress>
                 <p>
                   <b>DECISION MAKING</b>
-                  <b>100%</b>
                 </p>
                 <progress value="93" min="0" max="100"></progress>
                 <p>
                   <b>POSSITIVE ATTITUDE</b>
-                  <b>100%</b>
                 </p>
                 <progress value="98" min="0" max="100"></progress>
                 <p>
                   <b>WORK ETHIC</b>
-                  <b>100%</b>
                 </p>
                 <progress value="95" min="0" max="100"></progress>
                 <p>
                   <b>PATIENCE</b>
-                  <b>100%</b>
                 </p>
                 <progress value="90" min="0" max="100"></progress>
               </div>
             </div>
           </div>
-          <div className={style.aboutUs}>
+          <div
+            className={
+              inView
+                ? `${style.aboutUs} ${style.aboutUsZoom}`
+                : `${style.aboutUs}`
+            }
+            ref={ref}
+          >
             <div className={style.aboutPhoto}>
               <img src="yo.jpg" alt="foto" className={style.aboutPhoto} />
             </div>
@@ -140,7 +146,14 @@ const About = () => {
               </p>
             </div>
           </div>
-          <div className={style.aboutSkills}>
+          <div
+            className={
+              inView
+                ? `${style.aboutSkills} ${style.aboutSkillsZoom}`
+                : `${style.aboutSkills}`
+            }
+            ref={ref}
+          >
             <div>
               <h3>Tech skills</h3>
               <div className={style.aboutProgress}>
@@ -151,72 +164,58 @@ const About = () => {
                 <progress value="80" min="0" max="100"></progress>
                 <p>
                   <b>CSS3</b>
-                  <b>100%</b>
                 </p>
                 <progress value="85" min="0" max="100"></progress>
                 <p>
                   <b>JAVASCRIPT</b>
-                  <b>100%</b>
                 </p>
                 <progress value="79" min="0" max="100"></progress>
                 <p>
                   <b>REACT JS</b>
-                  <b>100%</b>
                 </p>
                 <progress value="80" min="0" max="100"></progress>
                 <p>
                   <b>NODE JS</b>
-                  <b>100%</b>
                 </p>
                 <progress value="86" min="0" max="100"></progress>
                 <p>
                   <b>EXPRESS</b>
-                  <b>100%</b>
                 </p>
                 <progress value="89" min="0" max="100"></progress>
                 <p>
                   <b>TAILWIND</b>
-                  <b>100%</b>
                 </p>
                 <progress value="80" min="0" max="100"></progress>
                 <p>
                   <b>REACT NATIVE</b>
-                  <b>100%</b>
                 </p>
                 <progress value="65" min="0" max="100"></progress>
                 <p>
                   <b>SCRUM</b>
-                  <b>100%</b>
                 </p>
                 <progress value="80" min="0" max="100"></progress>
                 <p>
                   <b>TYPESCRIPT</b>
-                  <b>100%</b>
                 </p>
                 <progress value="65" min="0" max="100"></progress>
                 <p>
                   <b>GIT</b>
-                  <b>100%</b>
                 </p>
                 <progress value="88" min="0" max="100"></progress>
                 <p>
                   <b>TRELLO</b>
-                  <b>100%</b>
                 </p>
                 <progress value="80" min="0" max="100"></progress>
                 <p>
                   <b>SEQUELIZE</b>
-                  <b>100%</b>
                 </p>
                 <progress value="76" min="0" max="100"></progress>
                 <p>
                   <b>MYSQL</b>
-                  <b>100%</b>
                 </p>
                 <progress value="79" min="0" max="100"></progress>
                 <p>
                   <b>POSTGRESQL</b>
-                  <b>100%</b>
                 </p>
                 <progress value="75" min="0" max="100"></progress>
               </div>

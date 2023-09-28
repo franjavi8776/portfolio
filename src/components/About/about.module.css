@@ -1,21 +1,15 @@
 .aboutSection {
   width: 80%;
-  margin: 10rem auto;
-  margin-bottom: 0;
-  opacity: 0;
-  transform: scale(85%);
-  transition: 2s;
-}
-.aboutSectionZoom {
-  opacity: 1;
-  transform: scale(100%);
-  transition: 2s;
+  margin: auto;
 }
 
 .aboutArticle {
+  width: 80%;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 3rem;
+  margin: 10rem auto;
+  margin-bottom: 0;
 }
 
 .aboutIcons h3 {
@@ -60,10 +54,10 @@
 }
 
 .articlePhoto {
-  width: 100%;
+  width: 90%;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  margin: 4rem 0;
+  margin: 4rem auto;
 }
 .aboutUs {
   width: 100%;
@@ -74,6 +68,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .aboutPhoto {
   width: 17rem;
   height: 16rem;
@@ -83,8 +78,10 @@
 
 /* Progress bar */
 .aboutSkills {
-  margin: auto 0;
+  width: 80%;
+  margin: 0 auto;
 }
+
 .aboutSkills h3 {
   text-align: center;
   font-size: 2rem;
@@ -125,14 +122,41 @@ progress::-moz-progress-bar {
 @media screen and (min-width: 1024px) {
   .aboutArticle {
     grid-template-columns: repeat(4, 1fr);
+    opacity: 0;
+    transform: scale(85%);
+    transition: 1s;
   }
+  .aboutArticleZoom {
+    opacity: 1;
+    transform: scale(100%);
+    transition: 1s;
+  }
+  .aboutUs {
+    opacity: 0;
+    transform: scale(85%);
+    transition: 2s;
+  }
+  .aboutUsZoom {
+    opacity: 1;
+    transform: scale(100%);
+    transition: 2s;
+  }
+
   .articlePhoto {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
   }
   .aboutSkills {
-    width: 85%;
+    width: 80%;
     margin: auto;
+    opacity: 0;
+    transform: scale(85%);
+    transition: 1.5s;
+  }
+  .aboutSkillsZoom {
+    opacity: 1;
+    transform: scale(100%);
+    transition: 1.5s;
   }
 }

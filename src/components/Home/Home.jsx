@@ -47,7 +47,7 @@ const Home = () => {
           <h1>
             Hello, I'm <b>Francisco Villarroel</b>
           </h1>
-          <h1>I'm a Full-Stack web developer</h1>
+          <h1>Full stack web developer</h1>
           <button
             className={style.homeButton}
             to="/"

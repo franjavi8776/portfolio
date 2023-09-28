@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html {
   box-sizing: border-box;
   font-size: 16px;
@@ -12,8 +16,10 @@ html {
   text-decoration: none;
   list-style: none;
 }
+
 .container {
   width: 100%;
+  margin: auto;
   min-height: 94vh;
 }
 h2 {

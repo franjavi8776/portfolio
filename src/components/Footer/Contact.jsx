@@ -159,9 +159,9 @@ const Contact = () => {
           </div>
           <div className={style.name}>
             FRANCISCO VILLARROEL
-            <i>
+            <span>
               <FaRegistered /> 2023
-            </i>
+            </span>
           </div>
         </div>
       </section>
