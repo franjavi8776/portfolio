@@ -4,5 +4,6 @@ export default {
   theme: {
     extend: {},
   },
+  base: "/portafolio1",
   plugins: [],
 };
