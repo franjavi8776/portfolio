@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://franjavi8776.github.io/portfolio/",
   "scripts": {
     "deploy": "gh-pages -d dist",
     "dev": "vite",
