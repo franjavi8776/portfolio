@@ -256,11 +256,11 @@ const Portfolio = () => {
               <br />
               <mark>
                 <a
-                  href="https://github.com/franjavi8776/ClientCountries"
+                  href="https://vercel.com/franjavi8776/client-countries"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Link github.com/franjavi8776/ClientCountries
+                  Link client-countries.vercel.app
                 </a>
               </mark>
             </p>
