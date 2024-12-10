@@ -1,16 +1,8 @@
-import style from "./modal.module.css";
-
-const Modal = ({ children, isOpen, closeModal }) => {
+const Modal = ({ isOpen, closeModal }) => {
   return (
-    <article
-      className={`${style.modal} ${isOpen && style.isOpen}
-`}
-    >
-      <div className={style.modalContainer}>
-        <button className={style.modalClose} onClick={closeModal}>
-          X
-        </button>
-        {children}
+    <article>
+      <div>
+        <button>X</button>
       </div>
     </article>
   );

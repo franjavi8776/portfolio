@@ -1,7 +1,11 @@
-import { useEffect } from "react";
-import style from "./home.module.css";
-
+import { useEffect, useState } from "react";
+import { Typewriter } from "react-simple-typewriter";
+import { AiFillGithub, AiOutlineMail } from "react-icons/ai";
+import { BsLinkedin, BsYoutube } from "react-icons/bs";
+import { Link } from "react-router-dom";
 const Home = () => {
+  const [step, setStep] = useState(0);
+
   const scrollTo = (id) => {
     const element = document.getElementById(id);
 
@@ -10,55 +14,110 @@ const Home = () => {
     });
   };
 
-  // Variables para el movimiento
-  let posX = 0;
-  let posY = 0;
-  const velocidadX = 0.5; // Velocidad horizontal
-  const velocidadY = 0.5; // Velocidad vertical
-
   useEffect(() => {
-    // Función para mover la imagen de fondo
-    const moverImagen = () => {
-      // Obtener el elemento .homeContainer después de que el componente esté montado
-      const homeContainer = document.querySelector(`.${style.homeContainer}`);
+    const timers = [];
 
-      // Verificar si homeContainer existe antes de actualizar el estilo
-      if (homeContainer) {
-        // Actualiza la posición
-        posX -= velocidadX;
-        posY += velocidadY;
+    if (step === 0) {
+      timers.push(setTimeout(() => setStep(1), 1000));
+    }
+    if (step === 1) {
+      timers.push(setTimeout(() => setStep(2), 2000));
+    }
+    if (step === 2) {
+      timers.push(setTimeout(() => setStep(3), 2000));
+    }
 
-        // Aplica la nueva posición al elemento .homeContainer
-        homeContainer.style.backgroundPosition = `${posX}px ${posY}px`;
-
-        // Solicita la próxima animación
-        requestAnimationFrame(moverImagen);
-      }
+    return () => {
+      timers.forEach((timer) => clearTimeout(timer));
     };
-
-    // Iniciar la animación después de que el componente esté montado
-    moverImagen();
-  }, []);
+  }, [step]);
 
   return (
     <div id="home">
-      <div className={style.homeContainer}>
-        <aside className={style.homeContent}>
-          <h1>
-            Hello, I'm <b>Francisco Villarroel</b>
+      <div className="relative w-full h-[100vh] bg-black ">
+        <aside className="w-full h-[100vh] pt-[20vh] flex flex-col items-center">
+          <h1 className="text-[3.5rem] text-white ">
+            {step >= 0 && (
+              <Typewriter
+                words={["Hello, I am"]}
+                loop={1}
+                typeSpeed={80}
+                delaySpeed={1000}
+              />
+            )}
+
+            <b className="text-[#e31b6d] ml-5">
+              {step >= 1 && (
+                <Typewriter
+                  words={["Francisco Villarroel"]}
+                  loop={1}
+                  typeSpeed={80}
+                  delaySpeed={1000}
+                />
+              )}{" "}
+            </b>
           </h1>
-          <h1>Full stack web developer</h1>
-          <button
-            className={style.homeButton}
-            to="/"
-            onClick={() => scrollTo("nav")}
-          >
-            <div className={style.arrowButton}>
-              <img src="right-arrow.svg" alt="arrow" />
-            </div>
-            View my work
-          </button>
+          <h1 className="text-[3.5rem] text-white m-[.25rem] z-50">
+            {step >= 2 && (
+              <Typewriter
+                words={["a Software Engineer"]}
+                loop={1}
+                typeSpeed={80}
+                delaySpeed={1000}
+              />
+            )}
+          </h1>
+          {step >= 3 && (
+            <button
+              to="/"
+              onClick={() => scrollTo("nav")}
+              className="relative group w-[12.5rem] h-[3.5rem] text-[1.5rem] flex justify-start items-center p-[.75rem] m-[1rem] bg-transparent text-white border border-white rounded-md hover:bg-[#e31b6d] hover:border-[#e31b6d] transition-all duration-[0.5s] ease-in-out z-50"
+            >
+              <div className="absolute top-0 left-0 w-[100%] h-[100%] flex items-center justify-end bg-transparent">
+                <img
+                  src="right-arrow.svg"
+                  alt="arrow"
+                  className="w-[1.3rem] mr-[1rem]   transform group-hover:rotate-[90deg]"
+                />
+              </div>
+              See my work
+            </button>
+          )}
         </aside>
+
+        <div className="absolute bottom-0 w-full flex justify-center z-10">
+          <img src="francisco.jpg" alt="Francisco" className="w-[480px]" />
+        </div>
+        {step >= 3 && (
+          <div className="absolute bottom-10 right-10 flex justify-center  gap-10 text-white z-50">
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              to="https://www.linkedin.com/in/francisco-villarroel-2945a1260/"
+            >
+              <BsLinkedin className="text-[30px] lg:text-[40px] hover:text-[#e31b6d]" />
+            </Link>
+
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              to="https://github.com/franjavi8776"
+            >
+              <AiFillGithub className="text-[30px] lg:text-[40px]  hover:text-[#e31b6d]" />
+            </Link>
+
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              to="https://www.youtube.com/channel/UCy7GoxzJFo797bSRGK5ijiQ"
+            >
+              <BsYoutube className="text-[30px] lg:text-[40px] hover:text-[#e31b6d] " />
+            </Link>
+            <a href="mailto:franjavi871976@gmail.com">
+              <AiOutlineMail className="text-[30px] lg:text-[40px]  hover:text-[#e31b6d]" />
+            </a>
+          </div>
+        )}
       </div>
     </div>
   );

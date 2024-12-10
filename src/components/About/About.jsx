@@ -1,141 +1,38 @@
-import { useInView } from "react-intersection-observer";
-import { RiCompass2Line } from "react-icons/ri";
-import { DiResponsive } from "react-icons/di";
-import { IoRocketSharp } from "react-icons/io5";
-import { MdLightbulbOutline } from "react-icons/md";
-import style from "./about.module.css";
-
+import {
+  FaHtml5,
+  FaCss3,
+  FaJsSquare,
+  FaBootstrap,
+  FaSass,
+  FaReact,
+  FaVuejs,
+  FaNode,
+  FaLaravel,
+  FaTrello,
+} from "react-icons/fa";
+import { TbBrandTailwind } from "react-icons/tb";
+import {
+  SiSequelize,
+  SiMysql,
+  SiPostgresql,
+  SiPostman,
+  SiInsomnia,
+} from "react-icons/si";
 const About = () => {
-  const { ref, inView } = useInView({
-    /* Optional options */
-    threshold: 0.4,
-  });
   return (
-    <div id="about" className={style.container}>
-      <h2>ABOUT ME</h2>
-      <section className="aboutSection">
-        <article
-          className={
-            inView
-              ? `${style.aboutArticle} ${style.aboutArticleZoom}`
-              : `${style.aboutArticle}`
-          }
-          ref={ref}
-        >
-          <div className={style.aboutIcons}>
-            <div className={style.aboutIcon}>
-              <RiCompass2Line className={style.icon} />
+    <div id="about" className="w-full min-h-[94vh] bg-black pt-16">
+      <div className="container">
+        <h2 className="mb-12">ABOUT ME</h2>
+        <section className="w-full m-h-[600px] pb-10 bg-[#e31b6d15] rounded-2xl border-[1px] border-[#e31b6d]">
+          <div className="flex justify-around ">
+            <div className="w-[45%] mt-10 flex justify-center">
+              <img
+                src="yo.jpg"
+                alt="foto"
+                className="w-[300px] h-[280px] lg:w-[500px] lg:h-[450px] rounded-2xl border-[3px] border-black"
+              />
             </div>
-            <div className={style.aboutContent}>
-              <h3>Fast</h3>
-              <p>
-                Fast load times and lag free <br />
-                interaction, my highest priority.
-              </p>
-            </div>
-          </div>
-          <div className={style.aboutIcons}>
-            <div className={style.aboutIcon}>
-              <MdLightbulbOutline className={style.icon} />
-            </div>
-            <div className={style.aboutContent}>
-              <h3>Intuitive</h3>
-              <p>
-                Strong preference for easy to use,
-                <br />
-                intuitive UX/UI.
-              </p>
-            </div>
-          </div>
-          <div className={style.aboutIcons}>
-            <div className={style.aboutIcon}>
-              <DiResponsive className={style.icon2} />
-            </div>
-            <div className={style.aboutContent}>
-              <h3>Responsive</h3>
-              <p>
-                My layouts will work on any <br />
-                device, big or small.
-              </p>
-            </div>
-          </div>
-          <div className={style.aboutIcons}>
-            <div className={style.aboutIcon}>
-              <IoRocketSharp className={style.icon} />
-            </div>
-            <div className={style.aboutContent}>
-              <h3>Dynamic</h3>
-              <p>
-                Websites don't have to be static, I <br />
-                love making pages come to life.
-              </p>
-            </div>
-          </div>
-        </article>
-        <article className={style.articlePhoto}>
-          <div
-            className={
-              inView
-                ? `${style.aboutSkills} ${style.aboutSkillsZoom}`
-                : `${style.aboutSkills}`
-            }
-            ref={ref}
-          >
-            <div>
-              <h3>Soft skills</h3>
-              <div className={style.aboutProgress}>
-                <p>
-                  <b>COMMUNICATION</b>
-                  <b>100%</b>
-                </p>
-                <progress value="95" min="0" max="100"></progress>
-                <p>
-                  <b>PROBLEM SOLVING</b>
-                </p>
-                <progress value="98" min="0" max="100"></progress>
-                <p>
-                  <b>TEAMWORK</b>
-                </p>
-                <progress value="93" min="0" max="100"></progress>
-                <p>
-                  <b>CREATIVITY</b>
-                </p>
-                <progress value="90" min="0" max="100"></progress>
-                <p>
-                  <b>ADAPTABILITY</b>
-                </p>
-                <progress value="95" min="0" max="100"></progress>
-                <p>
-                  <b>DECISION MAKING</b>
-                </p>
-                <progress value="93" min="0" max="100"></progress>
-                <p>
-                  <b>POSSITIVE ATTITUDE</b>
-                </p>
-                <progress value="98" min="0" max="100"></progress>
-                <p>
-                  <b>WORK ETHIC</b>
-                </p>
-                <progress value="95" min="0" max="100"></progress>
-                <p>
-                  <b>PATIENCE</b>
-                </p>
-                <progress value="90" min="0" max="100"></progress>
-              </div>
-            </div>
-          </div>
-          <div
-            className={
-              inView
-                ? `${style.aboutUs} ${style.aboutUsZoom}`
-                : `${style.aboutUs}`
-            }
-            ref={ref}
-          >
-            <div className={style.aboutPhoto}>
-              <img src="yo.jpg" alt="foto" className={style.aboutPhoto} />
-            </div>
-            <div className={style.aboutIcons}>
+            <div className="w-[55%] text-white mt-20 lg:mt-36 text-[20px] lg:text-[28px]">
               <h3>Who's this guy?</h3>
               <p>
                 I'm a full-stack Developer in Cochabamba, Bolivia.
@@ -146,83 +43,65 @@ const About = () => {
               </p>
             </div>
           </div>
-          <div
-            className={
-              inView
-                ? `${style.aboutSkills} ${style.aboutSkillsZoom}`
-                : `${style.aboutSkills}`
-            }
-            ref={ref}
-          >
-            <div>
-              <h3>Tech skills</h3>
-              <div className={style.aboutProgress}>
-                <p>
-                  <b>HTML5</b>
-                  <b>100%</b>
-                </p>
-                <progress value="80" min="0" max="100"></progress>
-                <p>
-                  <b>CSS3</b>
-                </p>
-                <progress value="85" min="0" max="100"></progress>
-                <p>
-                  <b>JAVASCRIPT</b>
-                </p>
-                <progress value="79" min="0" max="100"></progress>
-                <p>
-                  <b>REACT JS</b>
-                </p>
-                <progress value="80" min="0" max="100"></progress>
-                <p>
-                  <b>NODE JS</b>
-                </p>
-                <progress value="86" min="0" max="100"></progress>
-                <p>
-                  <b>EXPRESS</b>
-                </p>
-                <progress value="89" min="0" max="100"></progress>
-                <p>
-                  <b>TAILWIND</b>
-                </p>
-                <progress value="80" min="0" max="100"></progress>
-                <p>
-                  <b>REACT NATIVE</b>
-                </p>
-                <progress value="65" min="0" max="100"></progress>
-                <p>
-                  <b>SCRUM</b>
-                </p>
-                <progress value="80" min="0" max="100"></progress>
-                <p>
-                  <b>TYPESCRIPT</b>
-                </p>
-                <progress value="65" min="0" max="100"></progress>
-                <p>
-                  <b>GIT</b>
-                </p>
-                <progress value="88" min="0" max="100"></progress>
-                <p>
-                  <b>TRELLO</b>
-                </p>
-                <progress value="80" min="0" max="100"></progress>
-                <p>
-                  <b>SEQUELIZE</b>
-                </p>
-                <progress value="76" min="0" max="100"></progress>
-                <p>
-                  <b>MYSQL</b>
-                </p>
-                <progress value="79" min="0" max="100"></progress>
-                <p>
-                  <b>POSTGRESQL</b>
-                </p>
-                <progress value="75" min="0" max="100"></progress>
-              </div>
-            </div>
+          <div className="w-[80%] m-auto mt-5 flex justify-center flex-wrap gap-5">
+            <button className="text-white font-bold flex items-center py-2 px-4 bg-[#E34F26] rounded-md">
+              HTML <FaHtml5 />
+            </button>
+            <button className="text-white font-bold flex items-center py-2 px-4 bg-[#1572B6] rounded-md">
+              CSS <FaCss3 />
+            </button>
+            <button className="text-white font-bold flex items-center py-2 px-4 bg-[#F7DF1E] rounded-md">
+              JavaScript <FaJsSquare />
+            </button>
+            <button className="text-white font-bold flex items-center py-2 px-4 bg-[#7952B3] rounded-md">
+              Bootstrap <FaBootstrap />
+            </button>
+            <button className="text-white font-bold flex items-center py-2 px-4 bg-[#06B6D4] rounded-md">
+              Tailwind <TbBrandTailwind />
+            </button>
+            <button className="text-white font-bold flex items-center py-2 px-4 bg-[#CC6699] rounded-md">
+              Sass <FaSass />
+            </button>
+            <button className="text-white font-bold flex items-center py-2 px-4 bg-[#61DAFB] rounded-md">
+              React <FaReact />
+            </button>
+            <button className="text-white font-bold flex items-center py-2 px-4 bg-[#41B883] rounded-md">
+              Vue <FaVuejs />
+            </button>
+            <button className="text-white font-bold flex items-center py-2 px-4 bg-[#339933] rounded-md">
+              NodeJs <FaNode />
+            </button>
+            <button className="text-white font-bold flex items-center py-2 px-4 bg-[#444444] rounded-md">
+              Express
+            </button>
+            <button className="text-white font-bold flex items-center py-2 px-4 bg-[#6E4B8B] rounded-md">
+              Sequelize <SiSequelize />
+            </button>
+            <button className="text-white font-bold flex items-center py-2 px-4 bg-[#2F2D8B] rounded-md">
+              TypeORM
+            </button>
+            <button className="text-white font-bold flex items-center py-2 px-4 bg-[#2F2D8B] rounded-md">
+              Larabel <FaLaravel />
+            </button>
+            <button className="text-white font-bold flex items-center py-2 px-4 bg-[#00618A] rounded-md">
+              MySQL <SiMysql />
+            </button>
+            <button className="text-white font-bold flex items-center py-2 px-4 bg-[#336791] rounded-md">
+              PostgreSQL <SiPostgresql />
+            </button>
+            <button className="text-white font-bold flex items-center py-2 px-4 bg-[#0079BF] rounded-md">
+              Trello <FaTrello />
+            </button>
+            <button className="text-white font-bold flex items-center py-2 px-4 bg-[#FF6A00] rounded-md">
+              Postman <SiPostman />
+            </button>
+            <button className="text-white font-bold flex items-center py-2 px-4 bg-[#6C5B8B] rounded-md">
+              Insomnia <SiInsomnia />
+            </button>
+            <button></button>
           </div>
-        </article>
-      </section>
+        </section>
+      </div>
     </div>
   );
 };

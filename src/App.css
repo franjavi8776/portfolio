@@ -24,13 +24,11 @@ html {
 }
 h2 {
   width: 200px;
-  position: relative;
-  top: 6rem;
-  margin: 0 auto;
+  margin: auto;
   padding: 0.25rem;
   font-size: 2rem;
-  color: #1b242f;
-  border-top: thin solid #00a1a7;
-  border-bottom: thin solid #00a1a7;
+  color: white;
+  border-top: thin solid #e31b6d;
+  border-bottom: thin solid #e31b6d;
   text-align: center;
 }
