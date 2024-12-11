@@ -36,7 +36,10 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="relative w-full min-h-[94vh] bg-black pt-2">
+    <div
+      id="contact"
+      className="relative w-full min-h-[94vh] bg-black pt-16 sm:pt-2"
+    >
       <h2 className="mb-12">CONTACT</h2>
       <section className="flex flex-col items-center">
         <h5 className="text-white text-xl mb-10">
@@ -44,7 +47,7 @@ const Contact = () => {
         </h5>
         <form
           onSubmit={handleSubmit}
-          className="w-[500px] h-[500px] bg-[#e31b6d15] rounded-lg flex flex-col justify-around items-center border-[1px] border-[#e31b6d]"
+          className="w-[400px] h-[400px] md:w-[500px] md:h-[500px] bg-[#e31b6d15] rounded-lg flex flex-col justify-around items-center border-[1px] border-[#e31b6d]"
         >
           <input
             type="text"
@@ -122,12 +125,12 @@ const Contact = () => {
               </Link>
             </div>
           </div>
-          <div className="absolute bottom-0 text-[#e31b6d] flex">
-            <span>FRANCISCO VILLARROEL</span>
-            <span className="flex">
-              <FaRegistered /> 2023
-            </span>
-          </div>
+        </div>
+        <div className="w-full absolute bottom-0 text-[#e31b6d] flex justify-center">
+          <span>FRANCISCO VILLARROEL</span>
+          <span className="flex">
+            <FaRegistered /> 2023
+          </span>
         </div>
       </section>
     </div>

@@ -20,11 +20,11 @@ import {
 } from "react-icons/si";
 const About = () => {
   return (
-    <div id="about" className="w-full min-h-[94vh] bg-black pt-16">
+    <div id="about" className="w-full min-h-[94vh] bg-black pt-16 pb-16">
       <div className="container">
         <h2 className="mb-12">ABOUT ME</h2>
-        <section className="w-full m-h-[600px] pb-10 bg-[#e31b6d15] rounded-2xl border-[1px] border-[#e31b6d]">
-          <div className="flex justify-around ">
+        <section className="w-[80%] m-auto md:w-full m-h-[600px] pb-10 bg-[#e31b6d15] rounded-2xl border-[1px] border-[#e31b6d]">
+          <div className="flex flex-col items-center md:flex-row md:justify-around ">
             <div className="w-[45%] mt-10 flex justify-center">
               <img
                 src="yo.jpg"
