@@ -36,7 +36,7 @@ const Home = () => {
     <div id="home">
       <div className="relative w-full h-[100vh] bg-black ">
         <aside className="w-full h-[100vh] pt-[20vh] flex flex-col items-center">
-          <h1 className="text-[3.5rem] text-white ">
+          <h1 className="text-2xl md:text-[3.5rem] text-white ">
             {step >= 0 && (
               <Typewriter
                 words={["Hello, I am"]}
@@ -57,7 +57,7 @@ const Home = () => {
               )}{" "}
             </b>
           </h1>
-          <h1 className="text-[3.5rem] text-white m-[.25rem] z-50">
+          <h1 className="text-2xl md:text-[3.5rem] text-white m-[.25rem] z-50">
             {step >= 2 && (
               <Typewriter
                 words={["a Software Engineer"]}
@@ -89,7 +89,7 @@ const Home = () => {
           <img src="francisco.jpg" alt="Francisco" className="w-[480px]" />
         </div>
         {step >= 3 && (
-          <div className="absolute bottom-10 right-10 flex justify-center  gap-10 text-white z-50">
+          <div className="absolute bottom-[55vh] right-[22vw] lg:bottom-10 md:right-10 flex justify-center  gap-10 text-white z-50">
             <Link
               target="_blank"
               rel="noopener noreferrer"
