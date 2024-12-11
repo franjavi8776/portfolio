@@ -1,3 +1,4 @@
+import axios from "axios";
 import { FaRegistered } from "react-icons/fa";
 import { AiFillGithub } from "react-icons/ai";
 import { BsLinkedin, BsYoutube } from "react-icons/bs";
@@ -11,6 +12,9 @@ const Contact = () => {
     subject: "",
     comments: "",
   });
+
+  const [isLoading, setIsLoading] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -29,10 +33,38 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(form);
-    resetForm();
+    setIsLoading(true);
+    setSuccessMessage("");
+
+    try {
+      const { data } = await axios.post(
+        "https://formsubmit.co/ajax/franjavi871976@gmail.com",
+        form,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+        }
+      );
+
+      //console.log(data.success);
+
+      if (data.success) {
+        setSuccessMessage("Correo enviado correctamente");
+      }
+      resetForm();
+    } catch (error) {
+      console.error("Error al enviar el formulario:", error.response || error);
+      setSuccessMessage("Ocurrio un error, Intentalo nuevamente");
+    } finally {
+      setIsLoading(false);
+      setTimeout(() => {
+        setSuccessMessage("");
+      }, 2000);
+    }
   };
 
   return (
@@ -42,12 +74,12 @@ const Contact = () => {
     >
       <h2 className="mb-12">CONTACT</h2>
       <section className="flex flex-col items-center">
-        <h5 className="text-white text-xl mb-10">
+        <h5 className="text-white text-lg md:text-xl mb-10">
           Have a question or want to work together?
         </h5>
         <form
           onSubmit={handleSubmit}
-          className="w-[400px] h-[400px] md:w-[500px] md:h-[500px] bg-[#e31b6d15] rounded-lg flex flex-col justify-around items-center border-[1px] border-[#e31b6d]"
+          className="w-[350px] min-h-[350px] md:w-[500px] md:h-[500px] bg-[#e31b6d15] rounded-lg flex flex-col justify-around items-center border-[1px] border-[#e31b6d]"
         >
           <input
             type="text"
@@ -91,11 +123,17 @@ const Contact = () => {
           <button
             type="submit"
             className=" bg-[#e31b6d] py-1 px-4 rounded-md text-white"
+            disabled={isLoading}
           >
-            Send
+            {isLoading ? "Sending..." : "Send"}
           </button>
         </form>
-        <div className="">
+        {successMessage && (
+          <div className="mt-4 text-white text-lg bg-[#e31b6d] p-2 rounded">
+            {successMessage}
+          </div>
+        )}
+        <div>
           <div className="flex justify-center gap-10 text-white my-10">
             <div className="text-[40px]">
               <Link
