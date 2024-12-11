@@ -89,7 +89,7 @@ const Home = () => {
           <img src="francisco.jpg" alt="Francisco" className="w-[480px]" />
         </div>
         {step >= 3 && (
-          <div className="absolute left-24 bottom-10 md:right-10 flex justify-center  gap-10 text-white z-50">
+          <div className="absolute bottom-10 w-full flex justify-center md:justify-end md:pr-10 gap-10 text-white z-50 ">
             <Link
               target="_blank"
               rel="noopener noreferrer"
