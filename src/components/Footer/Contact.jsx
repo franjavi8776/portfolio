@@ -79,7 +79,7 @@ const Contact = () => {
         </h5>
         <form
           onSubmit={handleSubmit}
-          className="w-[350px] min-h-[350px] md:w-[500px] md:h-[500px] bg-[#e31b6d15] rounded-lg flex flex-col justify-around items-center border-[1px] border-[#e31b6d]"
+          className="w-[350px] min-h-[350px] md:w-[500px] md:h-[500px] bg-[#e31b6d99] rounded-lg flex flex-col justify-around items-center border-[1px] border-[#e31b6d]"
         >
           <input
             type="text"
