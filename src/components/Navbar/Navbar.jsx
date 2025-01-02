@@ -40,7 +40,7 @@ const Navbar = () => {
         </ul>
         <div className="w-[40%] h-[6vh] flex justify-start md:justify-end md:mr-6 lg:justify-center items-center">
           <img src="coding.svg" alt="logo" className="w-8" />
-          <small className="text-white">FranCode</small>
+          <small className="text-white">FranCodeDev</small>
         </div>
 
         <button

@@ -33,13 +33,14 @@ const About = () => {
               />
             </div>
             <div className="w-[80%] md:w-[55%] text-white mt-20 lg:mt-36 text-[20px] lg:text-[28px]">
-              <h3>Who's this guy?</h3>
               <p>
-                I'm a full-stack Developer in Cochabamba, Bolivia.
-                <br />I have serious passion for UI effects, animations and
-                creating intuitive,
+                Hi, I'm Francisco Villarroel, a skilled Web Developer from
+                Cochabamba, Bolivia.
+                <br />I have extensive experience in creating dynamic and
+                user-friendly web solutions.
                 <br />
-                dynamic user experiences.
+                My greatest strength lies in adapting to clients' needs and
+                delivering tailored results that exceed expectations.
               </p>
             </div>
           </div>

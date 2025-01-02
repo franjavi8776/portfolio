@@ -60,7 +60,7 @@ const Home = () => {
           <h1 className="text-2xl md:text-[3.5rem] text-white m-[1rem] md:m-[2.50rem] z-50">
             {step >= 2 && (
               <Typewriter
-                words={["a Software Engineer"]}
+                words={["a Web Developer."]}
                 loop={1}
                 typeSpeed={80}
                 delaySpeed={1000}
