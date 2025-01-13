@@ -3,15 +3,17 @@ import { Link } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { AiOutlineClose, AiFillGithub, AiOutlineMail } from "react-icons/ai";
 import { BsLinkedin, BsYoutube } from "react-icons/bs";
+import { useLanguage } from "../Translate/LanguageContext";
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const { language, translations } = useLanguage();
 
   const links = [
-    { id: "home", label: "Home" },
-    { id: "portfolio", label: "Portfolio" },
-    { id: "about", label: "About" },
-    { id: "contact", label: "Contact" },
+    { id: "home", label: translations[language]?.nav.home },
+    { id: "portfolio", label: translations[language]?.nav.portfolio },
+    { id: "about", label: translations[language]?.nav.about },
+    { id: "contact", label: translations[language]?.nav.contact },
   ];
 
   const scrollTo = (id) => {
@@ -55,13 +57,13 @@ const Navbar = () => {
         </button>
       </nav>
       {isMobile && (
-        <div className="bg-[#e31b6d] w-full py-4">
+        <div className="bg-black w-full py-4">
           <ul className="grid grid-cols-1 gap-10 px-4 text-center">
             {links.map(({ id, label }) => (
               <li key={id}>
                 <Link
                   to="/"
-                  className="text-lg text-white hover:text-black"
+                  className="text-lg text-white hover:text-[#e31b6d]"
                   onClick={() => {
                     scrollTo(id);
                     setIsMobile(false);
@@ -72,38 +74,6 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <div className="mt-10 flex justify-center items-center gap-10 text-white">
-            <Link
-              target="_blank"
-              rel="noopener noreferrer"
-              to="https://www.linkedin.com/in/francisco-villarroel-2945a1260/"
-            >
-              <BsLinkedin className="text-3xl" />
-            </Link>
-
-            <Link
-              target="_blank"
-              rel="noopener noreferrer"
-              to="https://github.com/franjavi8776"
-            >
-              <AiFillGithub className="text-3xl" />
-            </Link>
-
-            <Link
-              target="_blank"
-              rel="noopener noreferrer"
-              to="https://www.youtube.com/channel/UCy7GoxzJFo797bSRGK5ijiQ"
-            >
-              <BsYoutube className="text-3xl" />
-            </Link>
-            <Link
-              target="_blank"
-              rel="noopener noreferrer"
-              to="https://www.youtube.com/channel/UCy7GoxzJFo797bSRGK5ijiQ"
-            >
-              <AiOutlineMail className="text-3xl" />
-            </Link>
-          </div>
         </div>
       )}
     </div>

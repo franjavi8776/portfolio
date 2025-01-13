@@ -1,14 +1,18 @@
 import { useEffect, useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
-import { AiFillGithub, AiOutlineMail } from "react-icons/ai";
+import { AiFillGithub } from "react-icons/ai";
+import { FaTwitter } from "react-icons/fa";
+import { BiLogoGmail } from "react-icons/bi";
+
 import { BsLinkedin, BsYoutube } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { useLanguage } from "../Translate/LanguageContext";
+
 const Home = () => {
   const [step, setStep] = useState(0);
+  const { language, translations, changeLanguage } = useLanguage();
 
   const scrollTo = (id) => {
     const element = document.getElementById(id);
-
     element.scrollIntoView({
       behavior: "smooth",
     });
@@ -30,7 +34,7 @@ const Home = () => {
     return () => {
       timers.forEach((timer) => clearTimeout(timer));
     };
-  }, [step]);
+  }, [step, language]);
 
   return (
     <div id="home">
@@ -39,17 +43,19 @@ const Home = () => {
           <h1 className="text-2xl md:text-[3.5rem] text-white ">
             {step >= 0 && (
               <Typewriter
-                words={["Hello, I am"]}
+                key={language}
+                words={[translations[language].greeting]}
                 loop={1}
                 typeSpeed={80}
                 delaySpeed={1000}
               />
             )}
 
-            <b className="text-[#e31b6d] ml-5">
+            <b className="text-[#e31b6d] ml-2">
               {step >= 1 && (
                 <Typewriter
-                  words={["Francisco Villarroel"]}
+                  key={language}
+                  words={[translations[language].name]}
                   loop={1}
                   typeSpeed={80}
                   delaySpeed={1000}
@@ -60,7 +66,8 @@ const Home = () => {
           <h1 className="text-2xl md:text-[3.5rem] text-white m-[1rem] md:m-[2.50rem] z-50">
             {step >= 2 && (
               <Typewriter
-                words={["a Web Developer."]}
+                key={language}
+                words={[translations[language].profession]}
                 loop={1}
                 typeSpeed={80}
                 delaySpeed={1000}
@@ -71,16 +78,18 @@ const Home = () => {
             <button
               to="/"
               onClick={() => scrollTo("nav")}
-              className="relative group w-[12.5rem] h-[3.5rem] text-[1.5rem] flex justify-start items-center p-[.75rem] m-[1rem] bg-transparent text-white border border-white rounded-md hover:bg-[#e31b6d] hover:border-[#e31b6d] transition-all duration-[0.5s] ease-in-out z-50"
+              className="relative group min-w-[12.5rem] h-[3.5rem] text-[1.5rem] flex justify-between items-center px-[1rem] m-[1rem] bg-transparent text-white border border-white rounded-md hover:bg-[#e31b6d] hover:border-[#e31b6d] transition-all duration-[0.5s] ease-in-out z-50"
             >
-              <div className="absolute top-0 left-0 w-[100%] h-[100%] flex items-center justify-end bg-transparent">
+              <span className="flex-1 text-left">
+                {translations[language]?.seeMyWork}
+              </span>
+              <div className="ml-2">
                 <img
                   src="right-arrow.svg"
                   alt="arrow"
-                  className="w-[1.3rem] mr-[1rem]   transform group-hover:rotate-[90deg]"
+                  className="w-[1.3rem] transform group-hover:rotate-[90deg]"
                 />
               </div>
-              See my work
             </button>
           )}
         </aside>
@@ -90,34 +99,58 @@ const Home = () => {
         </div>
         {step >= 3 && (
           <div className="absolute bottom-10 w-full flex justify-center md:justify-end md:pr-10 gap-10 text-white z-50 ">
-            <Link
+            <a
               target="_blank"
               rel="noopener noreferrer"
-              to="https://www.linkedin.com/in/francisco-villarroel-2945a1260/"
+              href="https://www.linkedin.com/in/francisco-villarroel-2945a1260/"
             >
               <BsLinkedin className="text-[30px] lg:text-[40px] hover:text-[#e31b6d]" />
-            </Link>
+            </a>
 
-            <Link
+            <a
               target="_blank"
               rel="noopener noreferrer"
-              to="https://github.com/franjavi8776"
+              href="https://github.com/franjavi8776"
             >
               <AiFillGithub className="text-[30px] lg:text-[40px]  hover:text-[#e31b6d]" />
-            </Link>
+            </a>
 
-            <Link
+            <a
               target="_blank"
               rel="noopener noreferrer"
-              to="https://www.youtube.com/channel/UCy7GoxzJFo797bSRGK5ijiQ"
+              href="https://www.youtube.com/channel/UCy7GoxzJFo797bSRGK5ijiQ"
             >
               <BsYoutube className="text-[30px] lg:text-[40px] hover:text-[#e31b6d] " />
-            </Link>
+            </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://x.com/franCodeDev"
+            >
+              <FaTwitter className="text-[30px] lg:text-[40px] hover:text-[#e31b6d] " />
+            </a>
             <a href="mailto:franjavi871976@gmail.com">
-              <AiOutlineMail className="text-[30px] lg:text-[40px]  hover:text-[#e31b6d]" />
+              <BiLogoGmail className="text-[30px] lg:text-[40px]  hover:text-[#e31b6d]" />
             </a>
           </div>
         )}
+        <div className="absolute top-10 right-10 text-white">
+          <button onClick={() => changeLanguage("en")}>
+            <span className="bg-white text-black font-bold hover:text-[#e31b6d] px-2 py-1 rounded-md">
+              English
+            </span>
+          </button>
+          <button onClick={() => changeLanguage("es")} className="mx-2">
+            <span className="bg-white text-black font-bold hover:text-[#e31b6d] px-2 py-1 rounded-md">
+              Español
+            </span>
+          </button>
+          <button onClick={() => changeLanguage("pt")}>
+            <span className="bg-white text-black font-bold hover:text-[#e31b6d] px-2 py-1 rounded-md">
+              Português
+            </span>
+          </button>
+        </div>
       </div>
     </div>
   );

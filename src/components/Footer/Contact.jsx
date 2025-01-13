@@ -2,8 +2,9 @@ import axios from "axios";
 import { FaRegistered } from "react-icons/fa";
 import { AiFillGithub } from "react-icons/ai";
 import { BsLinkedin, BsYoutube } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { FaTwitter } from "react-icons/fa";
 import { useState } from "react";
+import { useLanguage } from "../Translate/LanguageContext";
 
 const Contact = () => {
   const [form, setForm] = useState({
@@ -15,6 +16,10 @@ const Contact = () => {
 
   const [isLoading, setIsLoading] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
+
+  const { language, translations } = useLanguage();
+  const { contact } = translations[language].nav;
+  const t = translations[language].contact;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -53,12 +58,12 @@ const Contact = () => {
       //console.log(data.success);
 
       if (data.success) {
-        setSuccessMessage("Correo enviado correctamente");
+        setSuccessMessage(t.formSuccess);
       }
       resetForm();
     } catch (error) {
-      console.error("Error al enviar el formulario:", error.response || error);
-      setSuccessMessage("Ocurrio un error, Intentalo nuevamente");
+      console.error("Error sending form:", error.response || error);
+      setSuccessMessage(t.formError);
     } finally {
       setIsLoading(false);
       setTimeout(() => {
@@ -72,10 +77,10 @@ const Contact = () => {
       id="contact"
       className="relative w-full min-h-[94vh] bg-black pt-16 sm:pt-2"
     >
-      <h2 className="mb-12">CONTACT</h2>
+      <h2 className="mb-12">{contact}</h2>
       <section className="flex flex-col items-center">
         <h5 className="text-white text-lg md:text-xl mb-10">
-          Have a question or want to work together?
+          {t.contactMessage}
         </h5>
         <form
           onSubmit={handleSubmit}
@@ -84,7 +89,7 @@ const Contact = () => {
           <input
             type="text"
             name="name"
-            placeholder="Name"
+            placeholder={t.placeholderName}
             value={form.name}
             onChange={handleChange}
             className="w-[80%] bg-white rounded-sm p-2"
@@ -93,7 +98,7 @@ const Contact = () => {
           <input
             type="email"
             name="email"
-            placeholder="Enter email"
+            placeholder={t.placeholderEmail}
             value={form.email}
             onChange={handleChange}
             className="w-[80%] bg-white rounded-sm p-2"
@@ -103,7 +108,7 @@ const Contact = () => {
           <input
             type="text"
             name="subject"
-            placeholder="Enter subject"
+            placeholder={t.placeholderSubject}
             value={form.subject}
             onChange={handleChange}
             className="w-[80%] bg-white rounded-sm p-2"
@@ -114,7 +119,7 @@ const Contact = () => {
             name="comments"
             cols="50"
             rows="5"
-            placeholder="Your message"
+            placeholder={t.placeholderMessage}
             value={form.comments}
             onChange={handleChange}
             className="w-[80%] bg-white rounded-sm p-2"
@@ -125,7 +130,7 @@ const Contact = () => {
             className=" bg-[#e31b6d] py-1 px-4 rounded-md text-white"
             disabled={isLoading}
           >
-            {isLoading ? "Sending..." : "Send"}
+            {isLoading ? t.sending : t.send}
           </button>
         </form>
         {successMessage && (
@@ -136,35 +141,44 @@ const Contact = () => {
         <div>
           <div className="flex justify-center gap-10 text-white my-10">
             <div className="text-[40px]">
-              <Link
+              <a
                 target="_blank"
                 rel="noopener noreferrer"
                 to="https://www.linkedin.com/in/francisco-villarroel-2945a1260/"
               >
-                <BsLinkedin className="" />
-              </Link>
+                <BsLinkedin className="hover:text-[#e31b6d]" />
+              </a>
             </div>
             <div className="text-[40px]">
-              <Link
+              <a
                 target="_blank"
                 rel="noopener noreferrer"
                 to="https://github.com/franjavi8776"
               >
-                <AiFillGithub className="" />
-              </Link>
+                <AiFillGithub className="hover:text-[#e31b6d]" />
+              </a>
             </div>
             <div className="text-[40px]">
-              <Link
+              <a
                 target="_blank"
                 rel="noopener noreferrer"
                 to="https://www.youtube.com/channel/UCy7GoxzJFo797bSRGK5ijiQ"
               >
-                <BsYoutube />
-              </Link>
+                <BsYoutube className="hover:text-[#e31b6d]" />
+              </a>
+            </div>
+            <div className="text-[40px]">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://x.com/franCodeDev"
+              >
+                <FaTwitter className="hover:text-[#e31b6d]" />
+              </a>
             </div>
           </div>
         </div>
-        <div className="w-full absolute bottom-0 text-[#e31b6d] flex justify-center">
+        <div className="w-full absolute bottom-1 text-[#e31b6d] flex justify-center">
           <span>FRANCISCO VILLARROEL</span>
           <span className="flex">
             <FaRegistered /> 2023
