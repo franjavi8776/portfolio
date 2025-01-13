@@ -84,7 +84,7 @@ const Contact = () => {
         </h5>
         <form
           onSubmit={handleSubmit}
-          className="w-[350px] min-h-[350px] md:w-[500px] md:h-[500px] bg-[#e31b6d99] rounded-lg flex flex-col justify-around items-center border-[1px] border-[#e31b6d]"
+          className="w-[350px] min-h-[350px] md:w-[500px] md:h-[500px] bg-[#e31b6d] rounded-lg flex flex-col justify-around items-center border-[1px] border-white"
         >
           <input
             type="text"
@@ -127,7 +127,7 @@ const Contact = () => {
           ></textarea>
           <button
             type="submit"
-            className=" bg-[#e31b6d] py-1 px-4 rounded-md text-white"
+            className=" bg-white py-1 px-4 rounded-md text-black border font-bold border-black hover:text-[#e31b6d]"
             disabled={isLoading}
           >
             {isLoading ? t.sending : t.send}
@@ -146,7 +146,7 @@ const Contact = () => {
                 rel="noopener noreferrer"
                 to="https://www.linkedin.com/in/francisco-villarroel-2945a1260/"
               >
-                <BsLinkedin className="hover:text-[#e31b6d]" />
+                <BsLinkedin className="hover:text-[#e31b6d] cursor-pointer" />
               </a>
             </div>
             <div className="text-[40px]">
@@ -155,7 +155,7 @@ const Contact = () => {
                 rel="noopener noreferrer"
                 to="https://github.com/franjavi8776"
               >
-                <AiFillGithub className="hover:text-[#e31b6d]" />
+                <AiFillGithub className="hover:text-[#e31b6d] cursor-pointer" />
               </a>
             </div>
             <div className="text-[40px]">
@@ -164,7 +164,7 @@ const Contact = () => {
                 rel="noopener noreferrer"
                 to="https://www.youtube.com/channel/UCy7GoxzJFo797bSRGK5ijiQ"
               >
-                <BsYoutube className="hover:text-[#e31b6d]" />
+                <BsYoutube className="hover:text-[#e31b6d] cursor-pointer" />
               </a>
             </div>
             <div className="text-[40px]">
@@ -173,7 +173,7 @@ const Contact = () => {
                 rel="noopener noreferrer"
                 href="https://x.com/franCodeDev"
               >
-                <FaTwitter className="hover:text-[#e31b6d]" />
+                <FaTwitter className="hover:text-[#e31b6d] cursor-pointer" />
               </a>
             </div>
           </div>

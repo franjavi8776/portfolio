@@ -49,7 +49,7 @@ const About = () => {
     <div id="about" className="w-full min-h-[94vh] bg-black pt-16 pb-16">
       <div className="container">
         <h2 className="mb-12">{about}</h2>
-        <section className="w-[90%] m-auto md:w-full min-h-[600px] pb-10 bg-[#e31b6d99] rounded-2xl border-[1px] border-[#e31b6d]">
+        <section className="w-[90%] m-auto md:w-full min-h-[600px] pb-10 bg-[#e31b6d] rounded-2xl border-[1px] border-white">
           <div className="flex flex-col items-center md:flex-row md:justify-around ">
             <div className="w-[80%] md:w-[40%] mt-10 flex justify-center">
               <img

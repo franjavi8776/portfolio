@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { AiOutlineClose, AiFillGithub, AiOutlineMail } from "react-icons/ai";
-import { BsLinkedin, BsYoutube } from "react-icons/bs";
+import { AiOutlineClose } from "react-icons/ai";
 import { useLanguage } from "../Translate/LanguageContext";
 
 const Navbar = () => {
@@ -26,7 +25,7 @@ const Navbar = () => {
   return (
     <div className="sticky top-0 w-full h-[6vh] bg-[#e31b6d] z-10 border-b border-1 border-b-black">
       <nav id="nav" className="flex h-[6vh]">
-        <ul className="w-[60%] md:flex justify-center items-center gap-20 hidden">
+        <ul className="w-[60%] h-[6vh] md:flex justify-center items-center gap-20 hidden md:ml-6 lg:ml-0">
           {links.map(({ id, label }) => (
             <Link
               key={id}
@@ -40,30 +39,30 @@ const Navbar = () => {
             </Link>
           ))}
         </ul>
-        <div className="w-[40%] h-[6vh] flex justify-start md:justify-end md:mr-6 lg:justify-center items-center">
+        <div className="w-[40%] h-[6vh] flex justify-start items-center md:justify-end md:mr-6 lg:mr-0 lg:justify-center ">
           <img src="coding.svg" alt="logo" className="w-8" />
           <small className="text-white">FranCodeDev</small>
         </div>
 
         <button
-          className="md:hidden pr-3 absolute top-3 right-2"
+          className="h-[6vh] md:hidden absolute right-2 flex items-center"
           onClick={() => setIsMobile(!isMobile)}
         >
           {isMobile ? (
-            <AiOutlineClose className="w-8 h-8 font-bold text-black" />
+            <AiOutlineClose className="w-8 h-8 font-bold text-white" />
           ) : (
-            <RxHamburgerMenu className="w-8 h-8 font-bold text-black " />
+            <RxHamburgerMenu className="w-8 h-8 font-bold text-white" />
           )}
         </button>
       </nav>
       {isMobile && (
-        <div className="bg-black w-full py-4">
+        <div className="bg-[#e31b6d] w-full py-4">
           <ul className="grid grid-cols-1 gap-10 px-4 text-center">
             {links.map(({ id, label }) => (
               <li key={id}>
                 <Link
                   to="/"
-                  className="text-lg text-white hover:text-[#e31b6d]"
+                  className="text-lg text-white hover:text-black"
                   onClick={() => {
                     scrollTo(id);
                     setIsMobile(false);

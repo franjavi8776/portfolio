@@ -40,7 +40,7 @@ const Home = () => {
     <div id="home">
       <div className="relative w-full h-[100vh] bg-black ">
         <aside className="w-full h-[100vh] pt-[20vh] flex flex-col items-center">
-          <h1 className="text-2xl md:text-[3.5rem] text-white ">
+          <h1 className="text-xl md:text-[3.2rem]   text-white ">
             {step >= 0 && (
               <Typewriter
                 key={language}
@@ -51,7 +51,7 @@ const Home = () => {
               />
             )}
 
-            <b className="text-[#e31b6d] ml-2">
+            <b className="text-[#e31b6d] ml-2 md:ml-4">
               {step >= 1 && (
                 <Typewriter
                   key={language}
@@ -63,7 +63,7 @@ const Home = () => {
               )}{" "}
             </b>
           </h1>
-          <h1 className="text-2xl md:text-[3.5rem] text-white m-[1rem] md:m-[2.50rem] z-50">
+          <h1 className="text-xl md:text-[3.2rem] text-white m-[1rem] md:m-[2.50rem] z-50">
             {step >= 2 && (
               <Typewriter
                 key={language}
@@ -78,7 +78,7 @@ const Home = () => {
             <button
               to="/"
               onClick={() => scrollTo("nav")}
-              className="relative group min-w-[12.5rem] h-[3.5rem] text-[1.5rem] flex justify-between items-center px-[1rem] m-[1rem] bg-transparent text-white border border-white rounded-md hover:bg-[#e31b6d] hover:border-[#e31b6d] transition-all duration-[0.5s] ease-in-out z-50"
+              className="relative group min-w-[10.5rem] h-[3rem] md:h-[3.5rem] text-lg md:text-[1.5rem] flex justify-between items-center px-[1rem] m-[1rem] bg-transparent text-white border border-white rounded-md hover:bg-[#e31b6d] hover:border-[#e31b6d] transition-all duration-[0.5s] ease-in-out z-50"
             >
               <span className="flex-1 text-left">
                 {translations[language]?.seeMyWork}
@@ -98,59 +98,61 @@ const Home = () => {
           <img src="francisco.jpg" alt="Francisco" className="w-[480px]" />
         </div>
         {step >= 3 && (
-          <div className="absolute bottom-10 w-full flex justify-center md:justify-end md:pr-10 gap-10 text-white z-50 ">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.linkedin.com/in/francisco-villarroel-2945a1260/"
-            >
-              <BsLinkedin className="text-[30px] lg:text-[40px] hover:text-[#e31b6d]" />
-            </a>
+          <>
+            <div className="absolute bottom-10 w-full flex justify-center md:justify-end md:pr-10 gap-10 text-white z-50 ">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.linkedin.com/in/francisco-villarroel-2945a1260/"
+              >
+                <BsLinkedin className="text-[30px] lg:text-[40px] hover:text-[#e31b6d]" />
+              </a>
 
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://github.com/franjavi8776"
-            >
-              <AiFillGithub className="text-[30px] lg:text-[40px]  hover:text-[#e31b6d]" />
-            </a>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/franjavi8776"
+              >
+                <AiFillGithub className="text-[30px] lg:text-[40px]  hover:text-[#e31b6d]" />
+              </a>
 
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.youtube.com/channel/UCy7GoxzJFo797bSRGK5ijiQ"
-            >
-              <BsYoutube className="text-[30px] lg:text-[40px] hover:text-[#e31b6d] " />
-            </a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://x.com/franCodeDev"
-            >
-              <FaTwitter className="text-[30px] lg:text-[40px] hover:text-[#e31b6d] " />
-            </a>
-            <a href="mailto:franjavi871976@gmail.com">
-              <BiLogoGmail className="text-[30px] lg:text-[40px]  hover:text-[#e31b6d]" />
-            </a>
-          </div>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.youtube.com/channel/UCy7GoxzJFo797bSRGK5ijiQ"
+              >
+                <BsYoutube className="text-[30px] lg:text-[40px] hover:text-[#e31b6d] " />
+              </a>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://x.com/franCodeDev"
+              >
+                <FaTwitter className="text-[30px] lg:text-[40px] hover:text-[#e31b6d] " />
+              </a>
+              <a href="mailto:franjavi871976@gmail.com">
+                <BiLogoGmail className="text-[30px] lg:text-[40px]  hover:text-[#e31b6d]" />
+              </a>
+            </div>
+            <div className="absolute top-10 w-full flex justify-center md:justify-end md:pr-10 text-sm md:text-lg">
+              <button onClick={() => changeLanguage("en")}>
+                <span className=" bg-white text-black font-bold hover:text-[#e31b6d] px-2 py-1 rounded-md">
+                  English
+                </span>
+              </button>
+              <button onClick={() => changeLanguage("es")} className="mx-2">
+                <span className="bg-white text-black font-bold hover:text-[#e31b6d] px-2 py-1 rounded-md">
+                  Español
+                </span>
+              </button>
+              <button onClick={() => changeLanguage("pt")}>
+                <span className="bg-white text-black font-bold hover:text-[#e31b6d] px-2 py-1 rounded-md">
+                  Português
+                </span>
+              </button>
+            </div>
+          </>
         )}
-        <div className="absolute top-10 right-10 text-white">
-          <button onClick={() => changeLanguage("en")}>
-            <span className="bg-white text-black font-bold hover:text-[#e31b6d] px-2 py-1 rounded-md">
-              English
-            </span>
-          </button>
-          <button onClick={() => changeLanguage("es")} className="mx-2">
-            <span className="bg-white text-black font-bold hover:text-[#e31b6d] px-2 py-1 rounded-md">
-              Español
-            </span>
-          </button>
-          <button onClick={() => changeLanguage("pt")}>
-            <span className="bg-white text-black font-bold hover:text-[#e31b6d] px-2 py-1 rounded-md">
-              Português
-            </span>
-          </button>
-        </div>
       </div>
     </div>
   );

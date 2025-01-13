@@ -8,10 +8,10 @@ const Portfolio = () => {
     <div id="portfolio" className="w-full min-h-[100vh] bg-black pt-16">
       <h2>{portfolio}</h2>
       <div className="container">
-        <div className="mt-20 w-[90%] m-auto py-5 lg:py-0 md:margin-0 md:w-full min-h-[400px] bg-[#e31b6d99] flex flex-col lg:flex-row items-center justify-center rounded-lg border border-[#e31b6d] text-white">
+        <div className="mt-20 w-[90%] m-auto py-5 lg:py-0 md:margin-0 md:w-full min-h-[400px] bg-[#e31b6d] flex flex-col lg:flex-row items-center justify-center rounded-lg border border-white text-white">
           <a
             href="https://go-cochabamba.vercel.app/"
-            className="w-[80%] md:w-[70%] lg:w-[50%] min-h-[250px] flex flex-col justify-center items-center"
+            className="w-[90%] md:w-[75%] lg:w-[50%] min-h-[150px] flex flex-col  md:justify-center md:items-center"
           >
             <img
               src="go-cochabamba.png"
@@ -19,7 +19,7 @@ const Portfolio = () => {
               className=" lg:w-[90%] rounded-lg border-[3px] border-black"
             />
           </a>
-          <div className="w-[80%] md:w-[70%] lg:w-[50%] min-h-[250px] flex justify-center items-center pt-3 lg:pt-0 ">
+          <div className="w-[90%] md:w-[75%] lg:w-[50%] min-h-[250px] flex justify-center items-center text-justify mt-5 lg:mt-0">
             <p className=" lg:w-[90%] lg:m-auto ">
               {language === "en" && (
                 <>
